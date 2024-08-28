@@ -1,0 +1,117 @@
+html,
+body {
+  margin: 0; /* Menghilangkan margin default */
+  padding: 0; /* Menghilangkan padding default */
+  width: 100%; /* Lebar 100% dari viewport */
+  height: 100%; /* Tinggi 100% dari viewport */
+  overflow: hidden; /* Menyembunyikan scroll jika diperlukan */
+}
+
+/* Grid pattern background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to right,
+      rgba(128, 128, 128, 0.5) 4px,
+      transparent 2px
+    ),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.5) 4px, transparent 2px);
+  background-size: 100px 100px;
+  z-index: -2; /* Ensure it stays behind other content */
+}
+
+/* Blurred overlay */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent overlay */
+  backdrop-filter: blur(2px); /* Increase blur effect */
+  z-index: -1; /* Ensure it stays behind other content */
+}
+
+.image-wrapper {
+  position: absolute; /* Ensure child elements are positioned relative to this wrapper */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: -12%;
+  right: 8%;
+  width: 55%; /* Size of the image */
+  height: auto;
+  filter: grayscale(100%) opacity(0.9) brightness(0.8); /* Silhouette effect */
+  z-index: -1; /* Ensure it is below other content but above body::before and ::after */
+}
+.line {
+  position: fixed;
+  right: 20px;
+  top: 20%;
+  height: 50%;
+  width: 20px;
+  background-color: black;
+  margin-right: 10px;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.line::before {
+  top: -10px; /* Position the triangle at the top */
+  border-bottom: 10px solid black; /* Triangle pointing down */
+}
+
+.line::after {
+  bottom: -10px; /* Position the triangle at the bottom */
+  border-top: 10px solid black; /* Triangle pointing up */
+}
+.line2 {
+  position: fixed;
+  bottom: 15px; /* Margin from the bottom of the screen */
+  left: 20px; /* Margin from the left of the screen */
+  height: 0;
+  width: calc(100% - 40px); /* Full width minus margins */
+  border-bottom: 8px solid black; /* Thickness of the bottom border */
+  z-index: 10; /* Ensure it is above other content */
+}
+
+.line2::before,
+.line2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.my-class {
+    font-family: 'Noto Serif JP', serif;
+  }
+.line2::before {
+  bottom: 0; /* Position the triangle below the line */
+  left: -12px; /* Position the triangle to the left */
+  border-bottom: 22px solid black; /* Triangle pointing to the right */
+  border-right: 12px solid transparent; /* Invisible part of the triangle */
+}
+
+.line2::after {
+  bottom: 0; /* Position the triangle below the line */
+  right: -12px; /* Position the triangle to the right */
+  border-bottom: 22px solid black; /* Triangle pointing to the left */
+  border-left: 12px solid transparent; /* Invisible part of the triangle */
+}

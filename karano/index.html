@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-none">
+        <div class="flex-none">
+          <button class="btn btn-block btn-ghost">
+            <span class="time"> </span>
+          </button>
+        </div>
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">
+            <span class="location"></span>
+          </a>
+        </div>
+        <div class="flex-1 justify-end">
+          <a
+            class="btn btn-ghost text-xl hover:bg-amber-300 hover:underline underline-offset-8"
+          >
+            <span class="">Home</span>
+          </a>
+          <a
+            class="btn btn-ghost text-xl hover:bg-amber-300 hover:underline underline-offset-8"
+          >
+            <span class="">Character</span>
+          </a>
+          <a
+            class="btn btn-ghost text-xl hover:bg-amber-300 hover:underline underline-offset-8"
+          >
+            <span class="">Music</span>
+          </a>
+        </div>
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block h-5 w-5 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="image-wrapper">
+      <img src="lilyBanner-removebg-preview.png" alt="Background Image" />
+    </div>
+    <div class="container flex relative w-full h-full min-h-screen justify-end">
+      <div class="image absolute h-full left-36 top-20">
+        <div
+          class="bulet w-72 h-72 -top-24 left-24 absolute bg-amber-300 rounded-full"
+          style="z-index: 1"
+        ></div>
+        <img
+          src="lilyBanner-removebg-preview.png"
+          class="relative"
+          style="width: 420px; height: 440px; z-index: 2"
+          alt=""
+          srcset=""
+        />
+        <div
+          class="bulet w-72 h-72 bottom-32 -left-20 absolute bg-gray-400 rounded-full"
+          style="z-index: 1"
+        ></div>
+      </div>
+      <div class="line"></div>
+      <div class="line2"></div>
+      <div class="w-2/6 relative flex-none top-20 mx-24">
+        <h1 class="text-6xl font-bold my-class">リリー</h1>
+        <p>
+          Vocaloid Lily is a Japanese Vocaloid developed by the company Crypton
+          Future Media, and released in April 2011. She is part of the Vocaloid
+          family and is known for her distinctive voice and versatile
+          performance capabilities. Lily's character design and voice are
+          intended to embody a modern, stylish aesthetic that appeals to a broad
+          audience.
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
